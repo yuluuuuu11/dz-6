@@ -1,34 +1,63 @@
-Определите, принадлежит ли точка с координатами (x, y) заштрихованной области, ограниченной прямой и окружностью.
-Границы области:
-y = -x
-x² + y² = 2.
+# ДЗ к работе 4
 
-**1.АЛГОРИТМ**
-1. Начало
-2. Ввод x,y
-3. Проверка условий:
-   
-   ((x * x + y * y <= 2.0) && (x >= 0.0) && (y <= -x) && ((x * x + y * y == 2.0) || (x == 0.0) || (y == -x)))?
-   
-   **ДА:** Точка находится на грани области
-   
-   **НЕТ:** ((x * x + y * y < 2.0) && (x > 0.0) && (y < -x))?
-   
-   **ДА:** Точка принадлежит области
-   
-   **НЕТ:** Точка не принадлежит области
-   
-5. Конец
+## Условие (Вариант 4)
 
-**БЛОК СХЕМА**
+Определить, попадает ли точка с заданными координатами (x, y) в заштрихованную область на плоскости.
 
-https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%D0%B1%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-1%22%20id%3D%22ClHPE9lSmwtNpOseeqvs%22%3E5Vttb6M4EP41kdqTWmHz%2FjEvbe90u6uVutLefTq5wSVcCc4BaZP79WdjE2xDEpJCcmlXKwePzWDPjGfmGejAHM9XDylazL6SAMcDaASrgTkZQAgc36Q%2FjLIWFGDZnBKmUSBoFeEx%2BhcLoiGoyyjAmTIxJyTOo4VKnJIkwdNcoaE0JW%2FqtGcSq09doBDXCI9TFNepP6Mgn3GqB92K%2FiuOwln5ZLplPjJH5WSxk2yGAvImkcy7gTlOCcn51Xw1xjGTXikXft%2F9ltHNwlKc5G1umIcP9399%2BZF8%2F5a%2BwsnL7y%2BTbz9uGrgIUpavSxlQPlTctDN6m0U5flygKRt5oyqntFk%2Bj2kP0Eu6xQX%2BLcmoygSF83pF8VLwEgSc5nglPU8s%2BQGTOc7TNZ0yk6TqCRG%2BVRoArqAJLqYh%2BuuyL2xA6D%2FccK5ERC%2BElA6QGGwjMbq5XBVNk%2BSyPCUveExiklJiQhIm4ucojjUSiqMwod0pfSKm9BETX0RtdCgG5lEQsEePUrJMAsyWbzBWJMnFiQJuozLoNH%2FC2pExoMv03PKatqOivTtKYWZdYY6mL9tW9FV2O9eXcEA4qJ3znSafBEPmPZjUY5Rl0VRVpyroRivfLSFbiCPFMcqjV3VtktjsHXYsnvCdRHQjlWQ961aVLQAak4ws0ykW98kuYz8rR2OVozTEeY1VoarN1o%2FXnnuA9opN7eBl1bVM2T6KLknzGQlJguK7iqrpuZrzhZCFMIW%2FcZ6vxTFDy5yohoJXUf4Hu50Kkvf%2BlEYmK8G56Kwlc6pbT6OlHGYWluN7rm8Dz3Chqeh142JPpFerzSEswgm9pLNQHOOYhCmaU%2FkscBrRBTBXqI59rwYOD1XP0QqXCUh3octpCF2%2BrbhC6Ln7Tlln3tD%2BaNGraEdQxCrWWoVk4XjdVeTyVHWZFtTV5fYVvErH3Yn%2F887p%2F4Dk%2FSpfeEL%2F57hqgmjrQbFnj%2Be1OXnpjMyfltn5Mm1o1O3fdDR%2FZegHoBY9ujsAoMMD4H%2FyBMBTD4B%2F2gPgX07oaThLTszW9ZTSqzAvpnDKIsXKDpx%2FlgzQF9Hr5hnNo5jKbDhg2NxBc7Z4MWGMsikKIkSHvpKE6MPFI4yCS1aYFuPhL%2FijjSnfJ6Ol4dMVZU51YpQ%2F13x9JSex4qsrGhWNX3h0pFNHhSlwylpeYMyfTzdDDzplJg3xttY1rlbyrLBiYGwY1OW3h%2BW2Nd2s2i1p33YpM2WP7pj9b1or310539DmXync6Oqur0sW9JwU9lFu%2BRiHDFokkL4a2qDbmztuVf34oHn7RhWCi%2B3oeXstp%2BhO8ObleE85cXe2Je7DTcq%2BKTsNRfEJ8vqTXJeylfyetV5Bh0ULivZev1F0zWLUkCpbE8FBTOBsgVT0MiS2sJzcDZgApmpEjlEzItgbmmiFuv9%2FRmRvRX%2BFLZTer%2FMape2pftXcVYx7n2YuCJdvTY6YyrbnQlUWA5zFqjFDqcrRvi18RBVIOfd3RNIWNWnPOpU777KuSZ3sBeEaaHCcsWtD3kkAkKe%2FI%2BoZAMEuseyZlX7uag4ANA2X%2FmnlbFfPgHtWbamNU1Z3zog%2Fa45bLCZboKRxNRJejZlHvglQ%2BnLVCF2LXzZSvBJkHfniuhNs%2Bz5gK6PawzEsh4hSYONCUwXZAXAEDQjGdM1bVy%2FmGbeOenhqhaHuwl6rIuhHhY8OvLV8Vfi2cwsdNShZvQn%2FIxTgWueY7o4csy32tMvuvQQhPRWcbgDpSNzCWkeBqIfBzF4TXqihT6i9FPF6%2Bwyj%2FArqEqyvVQFDByonQSS1vKY7%2FVxmZW9P3tGtVziLG1DTg34qmdA4lZVZB0Cgxq%2BxxNG%2BjE%2BxgCZYYOiQs%2B2XWDqnk2NX%2B7MpTs%2BKj9ed4%2B2zgr6V53wq5e2X97Gas09cVoCHlAk%2Fxser2qtM3zhSdTojAHROfeuuFdbt9tP6AzGSv6sOP5SylRIOsQzF6RKiNHzYX8tN9iqyu%2BzkghCyjFG8rRil3%2FdjwKpFSeeI8gXtVn8Fw49f9cdE5t1%2F%3C%2Fdiagram%3E%3C%2Fmxfile%3E
+Область ограничена осью \(Oy\), прямой и окружностью:
 
-**2. РЕАЛИЗАЦИЯ ПРОГРАММЫ**
+- \(y_1 = -x\)
+- \(x^2 + y^2 = 2\)
 
-**3. РЕЗУЛЬТАТ ПРОГРАММЫ**
+### Картинка заштрихованной области
+<img width="358" height="294" alt="image" src="https://github.com/user-attachments/assets/0c32fe06-1f4a-4e00-8497-ba0b5ffef701" />
 
-(зависит от введенных значений)
+## 1. Алгоритм и блок-схема
 
-**4. ФАМИЛИЯ, ГРУППА**
-Битюкова Юлия, БОТИ-261
+### Алгоритм
+
+1. Настроить русскую локализацию для корректного вывода сообщений.
+2. Запросить у пользователя и ввести вещественные координаты точки: x и y.
+3. Проверить условия положения точки относительно области:
+   - **На границе области:** `((x * x + y * y <= 2.0) && (x >= 0.0) && (y <= -x) && ((x * x + y * y == 2.0) || (x == 0.0) || (y == -x)))`
+   - **Внутри области:** `((x * x + y * y < 2.0) && (x > 0.0) && (y < -x))`
+   - **Вне области:** во всех остальных случаях.
+4. Вывести соответствующее сообщение о положении точки.
+5. Завершить работу программы.
+
+### Блок-схема
+
+<img width="678" height="1024" alt="image" src="https://github.com/user-attachments/assets/4b096115-30a5-4cb9-a6a9-2f6d35bf09ff" />
+
+## 2. Реализация программы
+
+Код и реализация программы: [dz.c](dz.c)
+
+## 3. Результаты работы программы
+
+Контрольный пример 1 — точка внутри области (x = 0.5, y = -1):
+
+```text
+Введите x и y: 0.5 -1
+Точка (0.50, -1.00) принадлежит области
+```
+
+Контрольный пример 2 — точка вне области (x = 2, y = 2):
+
+```text
+Введите x и y: 2 2
+Точка (2.00, 2.00) не принадлежит области
+```
+
+Контрольный пример 3 — точка на границе области (x = 1, y = -1):
+
+```text
+Введите x и y: 1 -1
+Точка (1.00, -1.00) находится на границе области
+```
+
+## 4. Информация о разработчике
+
+- **ФИО:** Битюкова Юлия 
+- **Группа:** БОТИ-261
+
